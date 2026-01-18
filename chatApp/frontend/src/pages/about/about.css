@@ -1,0 +1,18 @@
+.left{
+    width: 10%;
+    border: 2px solid black;
+    height: 50vh;
+    background-color: lightgray;
+    float: left;
+}
+ul{
+border: 2px solid red;
+list-style: none; 
+}
+li{
+    border: 2px solid blue;
+    margin: 10px;
+    padding: 5px;
+    background-color: white;
+    cursor: pointer;
+}

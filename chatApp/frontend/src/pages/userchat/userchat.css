@@ -1,0 +1,441 @@
+/* .chat-content {
+  display: flex;
+  flex-direction: column;  
+  padding: 10px;
+  background: #efeae2;
+  cursor: difault;
+  overflow-y: auto;
+  border: 2px solid rgb(135, 207, 117);
+  min-height: 100px;
+  max-height: 400px;
+}
+
+.message {
+  display: inline-block;       
+  max-width: 70%;  
+  position: relative;             
+  padding: 8px 18px 8px 5px;
+  margin-bottom: 8px;
+  border-radius: 8px;
+  font-size: 14px;
+  line-height: 1.4;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: pre-wrap;
+  word-break: break-word;
+  text-align: right;
+  background: #fff;
+  color: #000;
+  border: 1px solid #ddd;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  user-select: none;
+  word-break: break-all;
+  border: 2px solid rgb(5, 0, 0);
+}
+
+.sent {
+  background: #dcf8c6;
+  margin-left: auto;
+  text-align: left;
+  cursor: text;
+}
+
+.received {
+  background: #fff;
+  margin-right: auto;
+  text-align: left;
+  cursor: text;
+}
+
+.message p {
+  margin: 0;
+}
+
+
+
+
+.bubble-wrapper{
+  display: flex;
+}
+.time {
+  
+  font-size: 10px;
+  color: gray;
+}
+
+.status::before {
+  font-size: 12px;
+  letter-spacing: -2px;
+}
+
+.status.sent::before {
+  content: "✓";
+  color: gray;
+}
+
+
+.status.delivered::before {
+  content: "✓✓";
+  color: gray;
+}
+
+
+.status.seen::before {
+  content: "✓✓";
+  color: #34b7f1; 
+}
+
+.options {
+  position: absolute;
+  top: 6px;
+  right: 8px;
+  display: none;
+}
+
+.message:hover .options {
+  display: block;
+}
+
+.arrow {
+  cursor: pointer;
+  font-size: 14px;
+  color: gray;
+} */
+
+
+
+
+
+
+/* 
+
+.chat-wrapper {
+  width: 100%;
+  max-width: 600px;
+  margin: auto;
+}
+
+.chat-content {
+  display: flex;
+  flex-direction: column;
+  padding: 12px;
+  background: #efeae2;
+  overflow-y: auto;
+  min-height: 150px;
+  max-height: 400px;
+  border: 2px solid #8bcf75;
+}
+
+.message {
+  display: inline-block;
+  max-width: 70%;
+  position: relative;
+  margin-bottom: 10px;
+  padding: 8px 10px;
+  border-radius: 8px;
+  font-size: 14px;
+  line-height: 1.4;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+
+.sent {
+  background: #dcf8c6;
+  margin-left: auto;
+  text-align: left;
+}
+
+.received {
+  background: #fff;
+  margin-right: auto;
+}
+
+.bubble-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.meta {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 4px;
+  margin-top: 4px;
+}
+
+.time {
+  font-size: 10px;
+  color: gray;
+}
+
+.status::before {
+  font-size: 12px;
+  letter-spacing: -2px;
+}
+
+.status.sent::before {
+  content: "✓";
+  color: gray;
+}
+
+.status.delivered::before {
+  content: "✓✓";
+  color: gray;
+}
+
+.status.seen::before {
+  content: "✓✓";
+  color: #34b7f1;
+}
+
+.options {
+  position: absolute;
+  top: 4px;
+  right: 6px;
+  display: none;
+}
+
+.message:hover .options {
+  display: block;
+}
+
+.arrow {
+  cursor: pointer;
+  font-size: 14px;
+  color: gray;
+}
+
+.dropdown {
+  position: absolute;
+  top: 18px;
+  right: 0;
+  background: #fff;
+  border-radius: 6px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+  min-width: 160px;
+  display: none;
+  z-index: 10;
+}
+
+.options:hover .dropdown {
+  display: block;
+}
+
+.option {
+  padding: 8px 12px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.option:hover {
+  background: #f2f2f2;
+}
+
+.option.delete,
+.option.delete-everyone {
+  color: red;
+} */
+
+
+
+/* =========================
+   CHAT CONTAINER
+========================= */
+
+.chat-wrapper {
+  width: 100%;
+  max-width: 750px;
+  margin: auto;
+}
+
+.chat-content {
+  display: flex;
+  flex-direction: column;
+  padding: 12px;
+  background: #efeae2;
+  overflow-y: auto;
+  min-height: 150px;
+  max-height: 400px;
+  border: 2px solid #8bcf75;
+}
+
+/* =========================
+   MESSAGE BUBBLE
+========================= */
+
+.message {
+  position: relative;
+  display: inline-block;
+  max-width: 70%;
+  margin-bottom: 10px;
+  padding: 8px 10px;
+  border-radius: 8px;
+  font-size: 14px;
+  line-height: 1.4;
+  white-space: pre-wrap;
+  word-break: break-word;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+
+/* SENT (RIGHT) */
+.sent {
+  background: #dcf8c6;
+  margin-left: auto;
+}
+
+/* RECEIVED (LEFT) */
+.received {
+  background: #ffffff;
+  margin-right: auto;
+}
+
+/* =========================
+   TEXT + META
+========================= */
+
+.bubble-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.text {
+  word-break: break-word;
+}
+
+.meta {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 4px;
+}
+
+.time {
+  font-size: 10px;
+  color: gray;
+}
+
+/* =========================
+   MESSAGE STATUS (TICKS)
+========================= */
+
+.status::before {
+  font-size: 12px;
+  letter-spacing: -2px;
+}
+
+.status.sent::before {
+  content: "✓";
+  color: gray;
+}
+
+.status.delivered::before {
+  content: "✓✓";
+  color: gray;
+}
+
+.status.seen::before {
+  content: "✓✓";
+  color: #34b7f1;
+}
+
+/* =========================
+   OPTIONS (ARROW)
+========================= */
+
+.options {
+  position: absolute;
+  top: 4px;
+  right: 6px;
+  display: none;
+}
+
+/* SHOW ARROW ON MESSAGE HOVER */
+.message:hover .options {
+  display: block;
+}
+
+.arrow {
+  cursor: pointer;
+  font-size: 14px;
+  color: #6b6b6b;
+}
+
+/* =========================
+   DROPDOWN MENU
+========================= */
+
+.dropdown {
+  position: absolute;
+  top: 18px;
+  right: 0;
+  background: #ffffff;
+  border-radius: 6px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.18);
+  min-width: 160px;
+  padding: 4px 0;
+  z-index: 20;
+}
+
+/* LEFT ALIGN FOR RECEIVED MSG */
+.received .dropdown {
+  left: 0;
+  right: auto;
+}
+
+/* =========================
+   DROPDOWN OPTIONS
+========================= */
+
+.option {
+  padding: 8px 14px;
+  font-size: 13px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.option:hover {
+  background: #f1f1f1;
+}
+
+.option.delete,
+.option.delete-everyone {
+  color: #e53935;
+}
+
+/* =========================
+   OPTIONAL ANIMATION
+========================= */
+
+.dropdown {
+  animation: fadeIn 0.15s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.edited {
+  font-size: 10px;
+  color: gray;
+  margin-right: 4px;
+  font-style: italic;
+}
+
+
+.message.deleted {
+  font-style: italic;
+  color: gray;
+}
+
+.message.deleted .options {
+  display: none !important;
+}

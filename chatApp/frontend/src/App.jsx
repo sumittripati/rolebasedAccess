@@ -36,7 +36,6 @@ const App = () => {
         {/* 🔐 USER ONLY (login required) */}
         <Route path="/service" element={<Service />} />
         <Route path="/blog" element={<Blog />} />
-
         {/* 🔐 ADMIN PROTECTED ROUTES */}
         <Route element={<AdminProtectedRoute />}>
           <Route path="/adminhome" element={<AdminHome />} />
@@ -45,7 +44,7 @@ const App = () => {
           <Route path="/admin/vendors" element={<Vendors />} />
         </Route>
 
-        {/* ❌ 404 */}
+        {/*  404 */}
         <Route path="*" element={<Pagenotfound />} />
       </Routes>
 
